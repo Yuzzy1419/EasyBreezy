@@ -90,6 +90,12 @@ nav ul li a {
     transform: rotateY(180deg);
 }
 
+.box .back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /* Ensure footer sticks to the bottom */
 html {
     height: 100%;
