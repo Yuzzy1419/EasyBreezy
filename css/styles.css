@@ -62,11 +62,14 @@ header h1 {
 
 main {
     padding: 20px;
-    background: rgba(255, 255, 255, 0.8); /* 背景が透けて見えないようにする */
+    background: rgba(255, 255, 255, 0.8); /* 背景を透過80%に設定 */
 }
 
 section {
     margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.8); /* セクションの背景も透過80%に設定 */
+    padding: 10px;
+    border-radius: 10px; /* 角を丸くする */
 }
 
 footer {
