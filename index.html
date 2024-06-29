@@ -21,46 +21,57 @@
         </div>
     </header>
     <main>
-        <section id="home">
-            <div class="container">
-                <h2>ようこそ！</h2>
-                <p>Yuzzyのブログサイトへようこそ。ここでは最新のニュースや面白いコンテンツをお届けします。</p>
+        <div class="content">
+            <div class="main-content">
+                <section id="home">
+                    <div class="container">
+                        <h2>ようこそ！</h2>
+                        <p>Yuzzyのブログサイトへようこそ。ここでは最新のニュースや面白いコンテンツをお届けします。</p>
+                    </div>
+                </section>
+                <section id="about">
+                    <div class="container">
+                        <h2>アバウト</h2>
+                        <p>Yuzzyの自己紹介やこのサイトの目的について書きます。</p>
+                    </div>
+                </section>
+                <section id="blog">
+                    <div class="container">
+                        <h2>ブログ</h2>
+                        <article>
+                            <h3>ブログタイトル1</h3>
+                            <p>ブログのコンテンツ1...</p>
+                        </article>
+                        <article>
+                            <h3>ブログタイトル2</h3>
+                            <p>ブログのコンテンツ2...</p>
+                        </article>
+                    </div>
+                </section>
+                <section id="contact">
+                    <div class="container">
+                        <h2>コンタクト</h2>
+                        <p>お問い合わせはこちらから。</p>
+                        <form>
+                            <label for="name">名前</label>
+                            <input type="text" id="name" name="name" required>
+                            <label for="email">メール</label>
+                            <input type="email" id="email" name="email" required>
+                            <label for="message">メッセージ</label>
+                            <textarea id="message" name="message" required></textarea>
+                            <button type="submit">送信</button>
+                        </form>
+                    </div>
+                </section>
             </div>
-        </section>
-        <section id="about">
-            <div class="container">
-                <h2>アバウト</h2>
-                <p>Yuzzyの自己紹介やこのサイトの目的について書きます。</p>
+            <div class="sidebar">
+                <h2>ギャラリー</h2>
+                <div class="gallery">
+                    <img src="images/cycling.jpg" alt="Cycling">
+                    <!-- ここに他の画像を追加する -->
+                </div>
             </div>
-        </section>
-        <section id="blog">
-            <div class="container">
-                <h2>ブログ</h2>
-                <article>
-                    <h3>ブログタイトル1</h3>
-                    <p>ブログのコンテンツ1...</p>
-                </article>
-                <article>
-                    <h3>ブログタイトル2</h3>
-                    <p>ブログのコンテンツ2...</p>
-                </article>
-            </div>
-        </section>
-        <section id="contact">
-            <div class="container">
-                <h2>コンタクト</h2>
-                <p>お問い合わせはこちらから。</p>
-                <form>
-                    <label for="name">名前</label>
-                    <input type="text" id="name" name="name" required>
-                    <label for="email">メール</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="message">メッセージ</label>
-                    <textarea id="message" name="message" required></textarea>
-                    <button type="submit">送信</button>
-                </form>
-            </div>
-        </section>
+        </div>
     </main>
     <footer>
         <div class="container">
