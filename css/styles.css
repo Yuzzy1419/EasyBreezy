@@ -85,6 +85,7 @@ nav ul li a {
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: rotateY(180deg);
 }
 
 .box .back img {
@@ -93,12 +94,16 @@ nav ul li a {
     object-fit: cover;
 }
 
-.box:hover {
+.box.clicked {
     transform: rotateY(180deg);
 }
 
-.box.clicked {
-    transform: rotateY(180deg);
+.box.clicked .back {
+    transform: rotateY(0);
+}
+
+.box.clicked .front {
+    transform: rotateY(-180deg);
 }
 
 /* Ensure footer sticks to the bottom */
@@ -123,4 +128,11 @@ footer {
     padding: 10px 0;
     width: 100%;
     flex-shrink: 0;
+}
+
+/* スマホ対応 */
+@media (max-width: 600px) {
+    .box .front {
+        font-size: 16px;
+    }
 }
