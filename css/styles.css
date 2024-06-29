@@ -48,12 +48,6 @@ nav ul li a {
     flex: 3;
 }
 
-.sidebar {
-    flex: 1;
-    background-color: #f4f4f4;
-    padding: 20px;
-}
-
 footer {
     background-color: #333;
     color: #fff;
@@ -95,10 +89,13 @@ footer {
     font-size: 20px;
 }
 
-.box .back img {
+.box .back::before {
+    content: '';
+    display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    background: url('images/cycling.jpg') no-repeat center center;
+    background-size: cover;
     transform: rotateY(180deg);
 }
 
