@@ -50,16 +50,6 @@ nav ul li a {
     flex: 3;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-}
-
 .wrapper {
     perspective: 1000px;
 }
@@ -91,11 +81,7 @@ footer {
     font-size: 20px;
 }
 
-.box .back::before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
+.box .back {
     background: url('images/cycling.jpg') no-repeat center center;
     background-size: cover;
     transform: rotateY(180deg);
