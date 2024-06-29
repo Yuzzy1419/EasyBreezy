@@ -104,7 +104,7 @@ nav ul li a {
 }
 
 .box.clicked .back {
-    transform: rotateY(360deg);
+    transform: rotateY(180deg);
 }
 
 /* Ensure footer sticks to the bottom */
