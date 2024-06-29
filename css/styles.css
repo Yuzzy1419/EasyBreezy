@@ -73,7 +73,7 @@ footer {
     height: 200px;
     position: relative;
     transform-style: preserve-3d;
-    transform: rotateY(30deg);
+    transform: rotate(30deg);
     transition: transform 0.5s;
     cursor: pointer;
 }
@@ -99,6 +99,6 @@ footer {
     transform: rotateY(180deg);
 }
 
-.box.clicked {
-    transform: rotateY(210deg);
+.box:hover {
+    transform: rotate3d(0.1, 1, 0.1, 180deg);
 }
