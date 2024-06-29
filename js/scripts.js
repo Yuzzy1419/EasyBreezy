@@ -1,6 +1,6 @@
-// JavaScriptファイルを作成して、お問い合わせフォームを処理する
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
+    const box = document.querySelector('.box');
 
     contactForm.addEventListener('submit', function(event) {
         event.preventDefault(); // デフォルトの送信動作をキャンセル
@@ -35,5 +35,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.error('Error:', error);
                 alert('申し訳ありませんが、メッセージの送信中にエラーが発生しました。もう一度お試しください。');
             });
+    });
+
+    box.addEventListener('click', function() {
+        box.classList.toggle('clicked');
     });
 });

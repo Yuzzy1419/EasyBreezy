@@ -73,22 +73,19 @@ footer {
     height: 200px;
     position: relative;
     transform-style: preserve-3d;
-    transform: rotateY(0deg);
+    transform: rotateY(30deg);
     transition: transform 0.5s;
+    cursor: pointer;
 }
 
-.box:hover {
-    transform: rotateY(180deg);
-}
-
-.box img, .box .back {
+.box .front, .box .back {
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
 }
 
-.box .back {
+.box .front {
     background-color: white;
     color: black;
     display: flex;
@@ -96,5 +93,12 @@ footer {
     align-items: center;
     font-family: "MS Gothic", sans-serif;
     font-size: 20px;
+}
+
+.box .back {
     transform: rotateY(180deg);
+}
+
+.box.clicked {
+    transform: rotateY(210deg);
 }
