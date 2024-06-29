@@ -59,7 +59,6 @@ nav ul li a {
     height: 200px;
     position: relative;
     transform-style: preserve-3d;
-    transform: rotate(30deg);
     transition: transform 0.5s;
     cursor: pointer;
 }
@@ -88,7 +87,7 @@ nav ul li a {
 }
 
 .box:hover {
-    transform: rotate3d(0.1, 1, 0.1, 180deg);
+    transform: rotateY(180deg);
 }
 
 /* Ensure footer sticks to the bottom */
@@ -112,7 +111,5 @@ footer {
     text-align: center;
     padding: 10px 0;
     width: 100%;
-    position: relative;
-    bottom: 0;
     flex-shrink: 0;
 }
