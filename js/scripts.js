@@ -17,8 +17,11 @@ document.addEventListener('DOMContentLoaded', function() {
             body: formDataSerialized
         };
 
+        // 自分で実装したメール送信のエンドポイント
+        const endpoint = '/sendmail'; // サーバーサイドのエンドポイントを指定する
+
         // メール送信処理を実行
-        fetch('https://formspree.io/f/xwpekeob', requestOptions)
+        fetch(endpoint, requestOptions)
             .then(response => response.json())
             .then(data => {
                 if (data.ok) {
