@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
-    const box = document.querySelector('.box');
+    const boxes = document.querySelectorAll('.box');
+    const instagramFeed = document.getElementById('instagram-feed');
+    const accessToken = 'YOUR_ACCESS_TOKEN'; // ここにアクセストークンを入力
 
     contactForm.addEventListener('submit', function(event) {
         event.preventDefault(); // デフォルトの送信動作をキャンセル
@@ -37,7 +39,25 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     });
 
-    box.addEventListener('click', function() {
-        box.classList.toggle('clicked');
+    boxes.forEach(box => {
+        box.addEventListener('click', function() {
+            box.classList.toggle('clicked');
+        });
     });
+
+    // Instagramの最新投稿を取得して表示
+    fetch(`https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,permalink,thumbnail_url,timestamp,username&access_token=${accessToken}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.data && data.data.length > 0) {
+                const latestPost = data.data[0];
+                const img = document.createElement('img');
+                img.src = latestPost.media_url;
+                img.alt = latestPost.caption || 'Instagram post';
+                instagramFeed.appendChild(img);
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching Instagram posts:', error);
+        });
 });

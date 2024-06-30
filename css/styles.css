@@ -1,4 +1,4 @@
-/* 既存のスタイル */
+/* styles.css */
 body, html {
     margin: 0;
     padding: 0;
@@ -13,8 +13,8 @@ body, html {
 }
 
 header {
-    background-color: #dc8051;
-    color: #000000;
+    background-color: #333;
+    color: #fff;
     padding: 10px 0;
 }
 
@@ -51,6 +51,9 @@ nav ul li a {
 }
 
 .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
     perspective: 1000px;
 }
 
@@ -104,7 +107,7 @@ nav ul li a {
 }
 
 .box.clicked .back {
-    transform: rotateY(180deg);
+    transform: rotateY(360deg);
 }
 
 /* Ensure footer sticks to the bottom */
@@ -136,4 +139,20 @@ footer {
     .box .front {
         font-size: 16px;
     }
+}
+
+#instagram-section {
+    width: 300px;
+    margin-left: 20px;
+}
+
+#instagram-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#instagram-feed img {
+    width: 100%;
+    height: auto;
 }
