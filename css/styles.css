@@ -74,7 +74,7 @@ nav ul li a {
 }
 
 .box .front {
-    background-color: white;
+    background-color: rgb(255, 157, 96);
     color: black;
     display: flex;
     justify-content: center;
