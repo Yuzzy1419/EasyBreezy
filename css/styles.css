@@ -81,7 +81,7 @@ nav ul li a {
     align-items: center;
     font-family: "MS Gothic", sans-serif;
     font-size: 20px;
-    transform: rotateY(0deg);
+    transform: rotateY(180deg);
 }
 
 .box .back {
